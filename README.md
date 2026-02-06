@@ -8,7 +8,7 @@ A full-stack **AI-powered project management application** with Spring Boot back
 
 See the AI Project Manager in action! Watch how AI agents collaborate to break down projects, assign tasks, and generate solutions in real-time.
 
-https://github.com/d-subrahmanyam/spring-boot-ai-project-manager/raw/main/images/ai-pm-app-demo.mp4
+https://github.com/user-attachments/assets/c5885233-8c1c-4fe6-9f65-4cbdf9ab3ee2
 
 > **Note**: Click the video above to see the full demo showcasing:
 > - Creating an AI-powered project
