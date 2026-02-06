@@ -31,6 +31,10 @@ https://github.com/user-attachments/assets/c5885233-8c1c-4fe6-9f65-4cbdf9ab3ee2
 
 *Watch AI agents work in real-time with buffered streaming, beautiful Markdown rendering, and token usage tracking.*
 
+![ai-pm-app-demo-03.png](images/ai-pm-app-demo-03.png)
+
+*To create a new AI-powered project, simply enter your project vision and let the AI agents handle the rest!*
+
 ---
 
 ## 🌟 Key Features
