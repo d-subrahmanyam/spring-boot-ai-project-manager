@@ -1,0 +1,17 @@
+services:
+  postgres:
+    image: 'postgres:latest'
+    environment:
+      - 'POSTGRES_DB=project-db'
+      - 'POSTGRES_PASSWORD=pa55ward'
+      - 'POSTGRES_USER=superuser'
+      - 'PGDATA=/var/lib/postgresql/data/pgdata'
+      - 'TZ=UTC'
+      - 'PGTZ=UTC'
+    ports:
+      - '5432:5432'
+    volumes:
+      - 'postgres-data:/var/lib/postgresql/data'
+
+volumes:
+  postgres-data:

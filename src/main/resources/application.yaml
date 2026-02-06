@@ -1,0 +1,61 @@
+logging:
+  level:
+    sql:
+      statement: DEBUG
+      parameter: DEBUG
+    org:
+      springframework:
+        web: DEBUG
+        ai: DEBUG
+    io.subbu.ai.pm: DEBUG
+
+spring:
+  application:
+    name: spring-boot-project-manager
+
+  autoconfigure:
+    exclude:
+      - org.springframework.ai.model.openai.autoconfigure.OpenAiAudioSpeechAutoConfiguration
+      - org.springframework.ai.model.openai.autoconfigure.OpenAiAudioTranscriptionAutoConfiguration
+      - org.springframework.ai.model.openai.autoconfigure.OpenAiImageAutoConfiguration
+      - org.springframework.ai.model.openai.autoconfigure.OpenAiEmbeddingAutoConfiguration
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    format-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/project-db?serverTimezone=UTC
+    username: superuser
+    password: pa55ward
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      connection-init-sql: SET TIME ZONE 'UTC'
+
+  ai:
+    openai:
+      base-url: http://localhost:1234
+      api-key: lm-studio
+      chat:
+        options:
+          temperature: 0.7
+          max-tokens: 8192  # ~6000 words - Comprehensive responses
+          model: mistralai/devstral-small-2-2512
+          stream-usage: true
+
+  output:
+    ansi:
+      enabled: ALWAYS
+
+# Custom application configuration
+app:
+  streaming:
+    buffer-size: 50  # Number of chunks to buffer before sending to UI (configurable)
+    buffer-timeout-ms: 500  # Max time to wait before flushing buffer (milliseconds)
