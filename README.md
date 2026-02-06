@@ -2,6 +2,37 @@
 
 A full-stack **AI-powered project management application** with Spring Boot backend featuring multi-agent orchestration and React TypeScript frontend with real-time streaming capabilities.
 
+## 🎥 Demo Video & Screenshots
+
+### Video Demo
+
+See the AI Project Manager in action! Watch how AI agents collaborate to break down projects, assign tasks, and generate solutions in real-time.
+
+https://github.com/d-subrahmanyam/spring-boot-ai-project-manager/raw/main/images/ai-pm-app-demo.mp4
+
+> **Note**: Click the video above to see the full demo showcasing:
+> - Creating an AI-powered project
+> - Multi-agent task delegation
+> - Real-time streaming responses
+> - Beautiful Markdown rendering
+> - Token usage tracking
+
+### Screenshots
+
+**Agent Projects Dashboard - Multi-Agent Collaboration**
+
+![AI Project Manager Dashboard](images/ai-pm-app-demo-01.png)
+
+*View all AI-powered projects, track tasks, and see which specialist agents are assigned to each task.*
+
+**Real-Time Streaming Execution**
+
+![Real-Time Task Execution](images/ai-pm-app-demo-02.png)
+
+*Watch AI agents work in real-time with buffered streaming, beautiful Markdown rendering, and token usage tracking.*
+
+---
+
 ## 🌟 Key Features
 
 ### AI Multi-Agent System
@@ -234,6 +265,8 @@ spring-boot-project-manager/
 ```
 
 ## 🎯 Using the Application
+
+> **💡 New to the app?** Watch the [demo video](#-demo-video) at the top of this README to see the complete workflow in action!
 
 ### 1. Create an AI-Powered Project
 
