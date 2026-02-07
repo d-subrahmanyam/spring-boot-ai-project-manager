@@ -13,6 +13,7 @@ import io.subbu.ai.pm.repos.TaskRepository;
 import io.subbu.ai.pm.vos.Project;
 import io.subbu.ai.pm.vos.Task;
 import io.subbu.ai.pm.vos.TaskExecutionResult;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -30,6 +31,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * Service that orchestrates the multi-agent system
  * Now uses JPA repository for persistent storage with Project entity
  */
+@Slf4j
 @Service
 @Transactional
 public class AgentOrchestrationService {
@@ -247,9 +249,12 @@ public class AgentOrchestrationService {
         AtomicReference<String> fullResult = new AtomicReference<>("");
 
         // Buffer chunks and emit accumulated content periodically
+        // Add backpressure handling to prevent overflow errors
         return contentStream
                 .doOnNext(chunk -> fullResult.updateAndGet(current -> current + chunk))
                 .bufferTimeout(streamBufferSize, Duration.ofMillis(streamBufferTimeoutMs))
+                .onBackpressureBuffer(1000, // Maximum number of buffered items
+                        dropped -> log.warn("Dropped {} buffered chunk(s) due to backpressure", dropped))
                 .map(chunks -> String.join("", chunks))
                 .scan("", (accumulated, newChunk) -> accumulated + newChunk)
                 .skip(1) // Skip the first empty accumulated value
