@@ -470,7 +470,9 @@ docker-compose up
 
 ## 📝 License
 
-This project is part of a learning exercise for building AI-powered full-stack applications with Spring Boot and React.
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+This project is part of a learning exercise for building AI-powered full-stack applications with Spring Boot and React. Feel free to use, modify, and learn from this codebase!
 
 ## 🚀 Future Enhancements
 
