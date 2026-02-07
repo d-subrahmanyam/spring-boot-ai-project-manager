@@ -582,6 +582,24 @@ For detailed implementation guides, cost estimates, and technical specifications
 - LM Studio for local LLM capabilities
 - React and Redux communities
 
+## 💡 Credits
+
+This project was inspired by the excellent agent patterns and design approaches from:
+- [**Agents Patterns**](https://github.com/lucasnscr/agents-pattens) by Lucas Nascimento - A comprehensive collection of AI agent architecture patterns and best practices
+
+## 📖 References
+
+### Spring AI Resources
+- [**Spring AI Documentation**](https://docs.spring.io/spring-ai/reference/) - Official documentation for Spring AI
+- [**Spring AI GitHub Repository**](https://github.com/spring-projects/spring-ai) - Source code and issue tracking
+- [**Spring AI Examples**](https://github.com/spring-projects/spring-ai-examples) - Sample applications and use cases
+
+### Additional Resources
+- [LM Studio](https://lmstudio.ai/) - Local LLM runtime
+- [Material-UI (MUI)](https://mui.com/) - React component library
+- [Redux Toolkit](https://redux-toolkit.js.org/) - State management
+- [Vite](https://vitejs.dev/) - Build tool
+
 ## 📞 Support
 
 For issues and questions:
@@ -591,7 +609,5 @@ For issues and questions:
 
 ---
 
-**Built with ❤️ using Spring Boot, React, and AI**
----
 
 **Built with ❤️ using Spring Boot, React, and AI**
